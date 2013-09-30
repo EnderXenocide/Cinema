@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    >
+        <EditText 
+            android:layout_height="wrap_content" 
+        	android:text="" 
+        	android:layout_width="fill_parent" 
+        	android:id="@+id/editTextNomCinema"
+        /> 
+        <LinearLayout
+			android:orientation="horizontal"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:gravity="center_horizontal"		
+		    android:layout_weight="0" 
+			>
+			<Button android:id="@+id/BouttonAjouter" 
+			android:text="@string/Ajouter" 
+			android:layout_width="wrap_content" 
+			android:layout_height="wrap_content"
+			android:onClick="onBouttonAjouterClick" 
+			/>
+			<Button android:id="@+id/BouttonModifier" 
+			android:text="@string/Modifier" 
+			android:layout_width="wrap_content" 
+			android:layout_height="wrap_content"
+			android:onClick="onBouttonValiderClick" 
+			android:visibility="gone"
+			/>
+			<Button android:id="@+id/BouttonSupprimer" 
+			android:text="@string/Supprimer" 
+			android:layout_width="wrap_content" 
+			android:layout_height="wrap_content"
+			android:onClick="onBouttonSupprimerClick"
+			android:visibility="gone"
+			/>
+			<Button android:id="@+id/BouttonFermer" 
+			android:text="@string/Fermer" 
+			android:layout_width="wrap_content" 
+			android:layout_height="wrap_content"
+			android:onClick="onBouttonFermerClick" 
+			/>
+		</LinearLayout>
+        <ListView                     
+	        android:id="@+id/android:list"
+	        android:isScrollContainer="true" 
+	        android:scrollbars="vertical"            
+	        android:layout_height="wrap_content" 
+	        android:layout_width="fill_parent"                     
+	        android:layout_weight="1" 
+	        android:textFilterEnabled="true"           
+        />
+        <TextView android:id="@+id/android:empty"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#FF0000"
+        android:text="@string/NoTheater"
+        />       
+ </LinearLayout>

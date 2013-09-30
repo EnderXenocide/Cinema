@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/itemAjouter"
+        android:icon="@android:drawable/ic_menu_save"
+        android:showAsAction="ifRoom|collapseActionView"
+        android:title="@string/Ajouter"/>
+    <item
+        android:id="@+id/itemAnnulerAjouterFilm"
+        android:icon="@android:drawable/ic_menu_close_clear_cancel"
+        android:title="@string/Annuler"/>
+    <item
+        android:id="@+id/itemGestionCine"
+        android:icon="@android:drawable/ic_menu_manage"
+        android:title="@string/GestionCinema"/>
+</menu>

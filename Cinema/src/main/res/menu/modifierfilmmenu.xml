@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+    <item
+        android:id="@+id/itemModifier"
+        android:icon="@android:drawable/ic_menu_save"
+        android:showAsAction="ifRoom|collapseActionView"
+        android:title="@string/Modifier"/>
+    <item
+        android:id="@+id/itemSupprimer"
+        android:icon="@android:drawable/ic_menu_delete"
+        android:title="@string/Supprimer"/>
+    <item
+        android:id="@+id/itemAnnuler"
+        android:icon="@android:drawable/ic_menu_close_clear_cancel"
+        android:title="@string/Annuler"/>
+    <item
+        android:id="@+id/itemGestionCine"
+        android:icon="@android:drawable/ic_menu_manage"
+        android:title="@string/GestionCinema"/>
+    <item
+        android:id="@+id/itemNavigationBar"
+        android:icon="@android:drawable/ic_menu_directions"
+        android:title="@string/ToggleNavigationBar"/>    
+</menu>

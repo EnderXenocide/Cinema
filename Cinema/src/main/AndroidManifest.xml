@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.silvestre.Cinema"
+    android:installLocation="auto"
+    android:versionCode="4"
+    android:versionName="1.5" >
+
+    <application
+        android:debuggable="true"
+        android:icon="@drawable/icon"
+        android:label="@string/app_label" >
+
+        <!-- android:backupAgent="CinemaBackupAgent" -->
+        <activity
+            android:name="com.silvestre.Cinema.Cinema"
+            android:label="@string/app_label"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <!-- Receives the search request. -->
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH" />
+                <!-- No category needed, because the Intent will specify this class component -->
+            </intent-filter>
+            <!-- Points to searchable meta data. -->
+            <meta-data
+                android:name="android.app.searchable"
+                android:resource="@xml/searchable" />
+        </activity>
+        <activity
+            android:name="com.silvestre.Cinema.Film"
+            android:label="@string/film_activity_label"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.silvestre.Cinema.Espace"
+            android:label="@string/espace_activity_label"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.silvestre.Cinema.Preferences"
+            android:label="@string/preferences_activity_label" />
+
+        <meta-data
+            android:name="com.google.android.backup.api_key"
+            android:value="AEdPqrEAAAAILS85kta5BTwPPotP2I0nCOKPlJNSNBXajp62XA" />
+
+        <provider
+            android:name="com.silvestre.Cinema.CinemaProvider"
+            android:authorities="com.silvestre.Cinema.CinemaProvider"
+            android:enabled="true"
+            android:exported="false" >
+        </provider>
+    </application>
+
+    <uses-sdk
+        android:minSdkVersion="14"
+        android:targetSdkVersion="16" />
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+</manifest>

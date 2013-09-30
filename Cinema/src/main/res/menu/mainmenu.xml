@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/itemNouveau"
+        android:icon="@android:drawable/ic_menu_add"
+        android:showAsAction="ifRoom|collapseActionView"
+        android:title="@string/Nouveau"/>
+    <item
+        android:id="@+id/itemRechercher"
+        android:icon="@android:drawable/ic_menu_search"
+        android:showAsAction="ifRoom|collapseActionView"
+        android:title="@string/Rechercher"/>
+    <item
+        android:id="@+id/itemGestionCine"
+        android:icon="@android:drawable/ic_menu_manage"
+        android:title="@string/GestionCinema"/>
+    <item
+        android:id="@+id/itemTrier"
+        android:icon="@android:drawable/ic_menu_sort_by_size"
+        android:title="@string/Trier"/>
+    <item
+        android:id="@+id/itemPreferences"
+        android:icon="@android:drawable/ic_menu_preferences"
+        android:title="@string/Preferences"/>
+    <item
+        android:id="@+id/itemDetailCout"
+        android:icon="@android:drawable/ic_menu_info_details"
+        android:title="@string/DetailCout"/>
+
+</menu>

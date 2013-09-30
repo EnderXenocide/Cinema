@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1" >
+
+        <TableLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+            <TableRow>
+
+                <TextView
+                    android:id="@+id/TextTitre"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="3dip"
+                    android:text="@string/tv_Titre"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/editTextTitre"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="" />
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:id="@+id/TextDate"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="3dip"
+                    android:text="@string/tv_Date"
+                    android:textStyle="bold" />
+
+                <LinearLayout>
+
+                    <CheckBox
+                        android:id="@+id/chkDate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="true"
+                        android:onClick="onChkDateClick" />
+
+                    <Button
+                        android:id="@+id/pickDate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:onClick="onPickDateClick"
+                        android:text="@string/DateVide" />
+                </LinearLayout>
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:id="@+id/TextTime"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="3dip"
+                    android:text="@string/tv_Time"
+                    android:textStyle="bold" />
+
+                <LinearLayout>
+
+                    <CheckBox
+                        android:id="@+id/chkTime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="true"
+                        android:onClick="onChkTimeClick" />
+
+                    <Button
+                        android:id="@+id/pickTime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:onClick="onPickTimeClick"
+                        android:text="@string/TimeVide" />
+                </LinearLayout>
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:id="@+id/TextDetail"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="3dip"
+                    android:text="Detail"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/editTextDetail"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:inputType="textMultiLine"
+                    android:text="" />
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:id="@+id/TextNbPersonnes"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="3dip"
+                    android:text="@string/tv_NbPersonnes"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/editTextNbPersonnes"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:inputType="number"
+                    android:text="1" />
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:id="@+id/TextPrix"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="3dip"
+                    android:text="@string/tv_Prix"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/editTextPrix"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:inputType="numberDecimal" />
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:id="@+id/TextCinema"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="3dip"
+                    android:text="@string/tv_Cinema"
+                    android:textStyle="bold" />
+
+                <Spinner
+                    android:id="@+id/spinnerCinemas"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawSelectorOnTop="true"
+                    android:prompt="@string/CinemasPrompt" />
+
+                <ImageButton
+                    android:id="@+id/BoutonCinema"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/GestionCine"
+                    android:onClick="onBoutonCinemaClick"
+                    android:src="@android:drawable/ic_menu_manage" />
+            </TableRow>
+        </TableLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/NavigationLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:visibility="gone" >
+        <Button
+            android:id="@+id/BouttonFirst"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@android:drawable/ic_media_previous"
+            android:onClick="onBouttonFirstClick" />
+
+        <Button
+            android:id="@+id/BouttonPrevious"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@android:drawable/ic_media_rew"
+            android:onClick="onBouttonPreviousClick" />
+        <!-- //TODO voir pour remplacer btn first et last par long press ... android:longClickable="true" -->
+
+        <Button
+            android:id="@+id/BouttonNext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@android:drawable/ic_media_ff"
+            android:onClick="onBouttonNextClick" />
+
+        <Button
+            android:id="@+id/BouttonLast"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@android:drawable/ic_media_next"
+            android:onClick="onBouttonLastClick" />
+        <!--
+First android:text="\u21E4"
+Previous"\u2190"
+Next"\u2192"
+Last"\u21E5"
+        -->
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    >
+    <LinearLayout
+        android:layout_width="fill_parent"
+    	android:layout_height="fill_parent"
+    	android:orientation="horizontal"    
+    	>
+	    <TextView android:id="@+id/li_titre"
+	        android:textSize="18sp"
+	        android:textStyle="bold"
+	        android:layout_width="fill_parent"
+	        android:layout_height="fill_parent"
+	        android:padding="3dip"
+	        android:layout_weight="1"
+	        /><!-- texte sur plusieurs lignes -->
+	    <TextView android:id="@+id/li_date"
+	        android:textSize="16sp"
+	        android:layout_width="wrap_content"
+	        android:layout_height="fill_parent"
+	        android:gravity="right"
+	        />
+	</LinearLayout>
+    <LinearLayout
+        android:layout_width="fill_parent"
+    	android:layout_height="fill_parent"
+    	android:orientation="horizontal"    
+    	>
+	    <TextView android:id="@+id/li_detail"
+	        android:textSize="14sp"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:padding="3dip"
+	        android:layout_weight="1"	        
+	        android:textColor="#003399"
+	        />	 
+	    <TextView android:id="@+id/li_nbPersonnes"
+	        android:textSize="14sp"
+	        android:layout_width="wrap_content"
+	        android:layout_height="fill_parent"
+	        android:textColor="#FF00FF"
+	        android:padding="3dip"
+	        android:gravity="right"	        
+	        /> <!--  #FF6600 -->
+    </LinearLayout>
+</LinearLayout>

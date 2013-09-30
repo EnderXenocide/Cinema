@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android">
+	<PreferenceCategory android:title="Persistence">
+		
+		<CheckBoxPreference android:key="FilterByYear"
+							android:title="Filtrer suivant l'année"							 
+							android:summaryOn="Mémoriser le choix du filtre" 
+							android:summaryOff="Ne pas mémoriser le choix du filtre" 						
+							android:defaultValue="false"
+							/>
+	</PreferenceCategory>
+	<PreferenceCategory android:title="Base de données">
+		<Preference android:key="ExportData" 
+					android:title="Exporter Données"
+					android:summary="Exporter la base de données vers carte..." />
+		<Preference android:key="ImportData" 
+					android:title="Importer Données"
+					android:summary="Importer les données à partir de la carte..." />
+		<Preference android:key="ImportSampleData" 
+					android:title="Importer Données Exemples"
+					android:summary="Importer la base de données exemple de l'Asset" />
+   </PreferenceCategory>
+
+</PreferenceScreen>
