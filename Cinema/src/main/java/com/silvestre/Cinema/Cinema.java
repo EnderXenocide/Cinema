@@ -122,10 +122,13 @@ public class Cinema extends ListActivity implements OnQueryTextListener, LoaderM
 		// fonction appui long sur la listview
 		list.setOnItemLongClickListener( new OnItemLongClickListener() {
 			public boolean onItemLongClick(AdapterView<?> parent, View v, int position, long id) {
-				OnSupprimer(id);
+				//OnSupprimer(id);
+				// Test lancement imdb
+				String idIMDB = "0068646";
+				OnGoIMDBTitle(idIMDB);
 				return true;
 			}
-		});
+		});		
 	}
 
 	@Override
@@ -507,7 +510,12 @@ public class Cinema extends ListActivity implements OnQueryTextListener, LoaderM
 		intent.putExtra(Film.INTENT_ID_FILM, idSceance);
 		startActivityForResult(intent, REQUEST_PREFERENCES);
 	}	
-
+	
+	public void OnGoIMDBTitle(String idIMDB) {
+		startActivity(new Intent(Intent.ACTION_VIEW,
+								 Uri.parse("imdb:///title/tt"+idIMDB+"/")));
+	}	
+	
 	public void OnSupprimer(long idSceance) {
 		final long IdASupprimer = idSceance;
 		//création d'un boite de dialogue pour confirmer le choix et supprimer le cas échéant
@@ -527,7 +535,7 @@ public class Cinema extends ListActivity implements OnQueryTextListener, LoaderM
 			public void onClick(DialogInterface dialog, int whichButton) {
 			}
 		})        
-		.show();	        
+		.show();       
 	}
 
 	public void SetOrder(int index) {
